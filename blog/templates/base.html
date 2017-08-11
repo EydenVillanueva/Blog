@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load statifiles }
+    {% load statifiles %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    
+
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
      <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-    
-    <link rel="stylesheet" href="../static/css/estilos.css"> 
-    
+
+    <link rel="stylesheet" href="../static/css/estilos.css">
+
 
     {% block template_conf_content %}
-    {%endblock}
-    <title> {% block title%} {% endblock} </title>
+    {%endblock%}
+    <title> {% block title%} {% endblock %} </title>
 </head>
 <body>
-    
+
     <header>
         <nav class=" navbar navbar-inverse">
             <div class="container-fluid">
@@ -45,20 +45,20 @@
 
                     <!--Formulario de búsqueda  -->
                      <from class="navbar-form navbar-left">
-                        <div class="form-group"> 
+                        <div class="form-group">
                             <input name='publicacion' type="text" class="form-control" placeholder="Buscar">
                         </div>
                         <button type="submit" class="btn btn-primary">
                             <span class="glyphicon glyphicon-search"></span>
                         </button>
-                        
-                    </from> 
-                    
+
+                    </from>
+
                     <!--Links derechos  -->
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
                     </ul>
-                    
+
                     <!--Fin Colleccion links de nav  -->
                 </div>
                 <!--Fin container-fluid  -->
@@ -69,15 +69,15 @@
     <div class="container-fluid">
         {% block body%}
         {% endblock %}
-        
+
     </div>
 
 
     <script src="{% static 'js/jquery.min.js' %}"> </script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-         
+
     <script src="../static/js/jquery.min.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script> 
-    
+    <script src="../static/js/bootstrap.min.js"></script>
+
 </body>
 </html>

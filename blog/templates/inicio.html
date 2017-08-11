@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-{% block title%} Inicio{% endblock}
+{% block title%} Inicio{% endblock %}
 
 {% block body%}
         <div class="list-group">
-            {% for publicacion in lista_publicaciones%}
+            {% for publicacion in lista_publicaciones %}
             <a href="" class=" list-group-item">
                 <h4 class="list-group-item-heading"> {{publicacion.titulo}} </h4>
                 <p class="list-group-item-text">
