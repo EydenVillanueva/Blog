@@ -10,3 +10,10 @@ class Publicacion(models.Model):
 
     def __str__(self):
         return self.titulo
+
+
+    class Admin:
+        list_display = ('titulo', 'fecha' , 'titulo_formato')
+        list_filter = ('titulo', 'fecha')
+        ordering = ('-fecha')
+        search_fields = ('titulo')
