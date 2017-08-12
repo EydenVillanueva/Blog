@@ -31,7 +31,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand">Blog</a>
+                    <a href="{% url 'inicio'%}" class="navbar-brand">Blog</a>
                     <!--Fin navbar-header  -->
                 </div>
 
@@ -39,8 +39,8 @@
                 <div class="collapse navbar-collapse" id="navbar-1">
                     <!--Inicia lista de menú  -->
                     <ul class="nav navbar-nav">
-                        <li class="{% block active_about %}{% endblock %}"><a href="#">Acerca De</a></li>
-                        <li class="{% block active_contact %}{% endblock %}"><a href="#"></span>Contacto</a></li>
+                        <li class="{% block active_about %}{% endblock %}"><a href="{% url 'about' %}">Acerca De</a></li>
+                        <li class="{% block active_contact %}{% endblock %}"><a href="{% url 'contacto' %}"></span>Contacto</a></li>
                     </ul>
 
                     <!--Formulario de búsqueda  -->
