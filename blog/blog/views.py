@@ -40,7 +40,7 @@ def contacto(request):
 
         email_asunto = 'Form de contacto'
         email_from = form_email
-        email_to = ['PedroEsparzaaa@gmail.com']
+        email_to = ['pedroEsparzaaa@gmail.com']
         email_mensaje = '%s: %s enviado por %s' %(form_nombre, form_mensaje, form_email)
 
         send_mail(
