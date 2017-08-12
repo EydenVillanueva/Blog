@@ -4,50 +4,89 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+0001_initial.py	../publicaciones/migrations/0001_initial.py	1;"	kind:file	line:1
 ALLOWED_HOSTS	../blog/settings.py	/^ALLOWED_HOSTS = []$/;"	kind:variable	line:28
-AUTH_PASSWORD_VALIDATORS	../blog/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:87
+AUTH_PASSWORD_VALIDATORS	../blog/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:89
+Admin	../publicaciones/models.py	/^    class Admin:$/;"	kind:class	line:15
 AppConfig	../publicaciones/apps.py	/^from django.apps import AppConfig$/;"	kind:namespace	line:1
 BASE_DIR	../blog/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:16
-DATABASES	../blog/settings.py	/^DATABASES = {$/;"	kind:variable	line:76
+ContactoForm	../blog/forms.py	/^class ContactoForm(forms.Form):$/;"	kind:class	line:4
+ContactoForm	../blog/views.py	/^from .forms import ContactoForm$/;"	kind:namespace	line:3
+DATABASES	../blog/settings.py	/^DATABASES = {$/;"	kind:variable	line:78
 DEBUG	../blog/settings.py	/^DEBUG = True$/;"	kind:variable	line:26
 INSTALLED_APPS	../blog/settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:33
-LANGUAGE_CODE	../blog/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	kind:variable	line:106
-MIDDLEWARE	../blog/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:42
+LANGUAGE_CODE	../blog/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	kind:variable	line:108
+MIDDLEWARE	../blog/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:44
+Migration	../publicaciones/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
+Publicacion	../blog/views.py	/^from publicaciones.models import Publicacion$/;"	kind:namespace	line:2
+Publicacion	../publicaciones/admin.py	/^from .models import Publicacion$/;"	kind:namespace	line:2
+Publicacion	../publicaciones/models.py	/^class Publicacion(models.Model):$/;"	kind:class	line:5
 PublicacionesConfig	../publicaciones/apps.py	/^class PublicacionesConfig(AppConfig):$/;"	kind:class	line:4
-ROOT_URLCONF	../blog/settings.py	/^ROOT_URLCONF = 'blog.urls'$/;"	kind:variable	line:52
+ROOT_URLCONF	../blog/settings.py	/^ROOT_URLCONF = 'blog.urls'$/;"	kind:variable	line:54
 SECRET_KEY	../blog/settings.py	/^SECRET_KEY = '@mxn#+oc&0)oo%84f_r5122g^!67-ndpf49rbf&gsw#y&a#2na'$/;"	kind:variable	line:23
-STATIC_URL	../blog/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:120
-TEMPLATES	../blog/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:54
-TIME_ZONE	../blog/settings.py	/^TIME_ZONE = 'UTC'$/;"	kind:variable	line:108
+STATICFILES_DIRS	../blog/settings.py	/^STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)$/;"	kind:variable	line:124
+STATIC_URL	../blog/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:122
+TEMPLATES	../blog/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:56
+TIME_ZONE	../blog/settings.py	/^TIME_ZONE = 'UTC'$/;"	kind:variable	line:110
 TestCase	../publicaciones/tests.py	/^from django.test import TestCase$/;"	kind:namespace	line:1
-USE_I18N	../blog/settings.py	/^USE_I18N = True$/;"	kind:variable	line:110
-USE_L10N	../blog/settings.py	/^USE_L10N = True$/;"	kind:variable	line:112
-USE_TZ	../blog/settings.py	/^USE_TZ = True$/;"	kind:variable	line:114
-WSGI_APPLICATION	../blog/settings.py	/^WSGI_APPLICATION = 'blog.wsgi.application'$/;"	kind:variable	line:70
+USE_I18N	../blog/settings.py	/^USE_I18N = True$/;"	kind:variable	line:112
+USE_L10N	../blog/settings.py	/^USE_L10N = True$/;"	kind:variable	line:114
+USE_TZ	../blog/settings.py	/^USE_TZ = True$/;"	kind:variable	line:116
+WSGI_APPLICATION	../blog/settings.py	/^WSGI_APPLICATION = 'blog.wsgi.application'$/;"	kind:variable	line:72
 __init__.py	../blog/__init__.py	1;"	kind:file	line:1
 __init__.py	../publicaciones/__init__.py	1;"	kind:file	line:1
 __init__.py	../publicaciones/migrations/__init__.py	1;"	kind:file	line:1
+__str__	../publicaciones/models.py	/^    def __str__(self):$/;"	kind:member	line:11
+about	../blog/views.py	/^def about(request):$/;"	kind:function	line:18
 admin	../blog/urls.py	/^from django.contrib import admin$/;"	kind:namespace	line:17
 admin	../publicaciones/admin.py	/^from django.contrib import admin$/;"	kind:namespace	line:1
 admin.py	../publicaciones/admin.py	1;"	kind:file	line:1
 application	../blog/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
 apps.py	../publicaciones/apps.py	1;"	kind:file	line:1
+asunto	../blog/forms.py	/^    asunto = forms.CharField()$/;"	kind:variable	line:6
+contacto	../blog/views.py	/^def contacto(request):$/;"	kind:function	line:27
+contenido	../publicaciones/models.py	/^    contenido = models.TextField()$/;"	kind:variable	line:7
+dependencies	../publicaciones/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:12
 django	../manage.py	/^            import django$/;"	kind:namespace	line:14
+email	../blog/forms.py	/^    email = forms.EmailField()$/;"	kind:variable	line:8
 execute_from_command_line	../manage.py	/^        from django.core.management import execute_from_command_line$/;"	kind:namespace	line:8
+fecha	../publicaciones/models.py	/^    fecha = models.DateField(auto_now=False,auto_now_add=True)$/;"	kind:variable	line:8
+fields	../publicaciones/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:18
+formato_email	../blog/forms.py	/^    def formato_email(self):$/;"	kind:member	line:14
+forms	../blog/forms.py	/^from django import forms$/;"	kind:namespace	line:1
+forms.py	../blog/forms.py	1;"	kind:file	line:1
 get_wsgi_application	../blog/wsgi.py	/^from django.core.wsgi import get_wsgi_application$/;"	kind:namespace	line:12
+inicio	../blog/views.py	/^def inicio(request):$/;"	kind:function	line:7
+initial	../publicaciones/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:10
+list_display	../publicaciones/models.py	/^        list_display = ('titulo', 'fecha' , 'titulo_formato')$/;"	kind:variable	line:16
+list_filter	../publicaciones/models.py	/^        list_filter = ('titulo', 'fecha')$/;"	kind:variable	line:17
 manage.py	../manage.py	1;"	kind:file	line:1
+mensaje	../blog/forms.py	/^    mensaje = forms.CharField(widget=forms.Textarea)$/;"	kind:variable	line:10
+migrations	../publicaciones/migrations/0001_initial.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
+models	../publicaciones/migrations/0001_initial.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 models	../publicaciones/models.py	/^from django.db import models$/;"	kind:namespace	line:1
 models.py	../publicaciones/models.py	1;"	kind:file	line:1
 name	../publicaciones/apps.py	/^    name = 'publicaciones'$/;"	kind:variable	line:5
+name	../publicaciones/migrations/0001_initial.py	/^            name='Publicacion',$/;"	kind:variable	line:17
+nombre	../blog/forms.py	/^    nombre = forms.CharField(required=True)$/;"	kind:variable	line:7
+operations	../publicaciones/migrations/0001_initial.py	/^    operations = [$/;"	kind:variable	line:15
+ordering	../publicaciones/models.py	/^        ordering = ('-fecha')$/;"	kind:variable	line:18
 os	../blog/settings.py	/^import os$/;"	kind:namespace	line:13
 os	../blog/wsgi.py	/^import os$/;"	kind:namespace	line:10
 os	../manage.py	/^import os$/;"	kind:namespace	line:2
-render	../publicaciones/views.py	/^from django.shortcuts import render$/;"	kind:namespace	line:1
+render	../blog/views.py	/^from django.shortcuts import render$/;"	kind:namespace	line:1
+search_fields	../publicaciones/models.py	/^        search_fields = ('titulo')$/;"	kind:variable	line:19
+send_mail	../blog/views.py	/^from django.core.mail import send_mail$/;"	kind:namespace	line:4
 settings.py	../blog/settings.py	1;"	kind:file	line:1
 sys	../manage.py	/^import sys$/;"	kind:namespace	line:3
 tests.py	../publicaciones/tests.py	1;"	kind:file	line:1
+titulo	../publicaciones/models.py	/^    titulo = models.CharField(max_length=450)$/;"	kind:variable	line:6
+titulo_formato	../publicaciones/models.py	/^    titulo_formato = models.CharField(max_length=80,null=True)$/;"	kind:variable	line:9
+unicode_literals	../publicaciones/migrations/0001_initial.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:3
 url	../blog/urls.py	/^from django.conf.urls import url$/;"	kind:namespace	line:16
-urlpatterns	../blog/urls.py	/^urlpatterns = [$/;"	kind:variable	line:19
+urlpatterns	../blog/urls.py	/^urlpatterns = [$/;"	kind:variable	line:21
 urls.py	../blog/urls.py	1;"	kind:file	line:1
+views	../blog/urls.py	/^from . import views$/;"	kind:namespace	line:19
+views.py	../blog/views.py	1;"	kind:file	line:1
 views.py	../publicaciones/views.py	1;"	kind:file	line:1
 wsgi.py	../blog/wsgi.py	1;"	kind:file	line:1
