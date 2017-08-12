@@ -2,15 +2,60 @@
 {% block title%} Inicio{% endblock %}
 
 {% block body%}
-        <div class="list-group">
-            {% for publicacion in lista_publicaciones %}
-            <a href="" class=" list-group-item">
-                <h4 class="list-group-item-heading"> {{publicacion.titulo}} </h4>
-                <p class="list-group-item-text">
-                    {{publicacion.contenido|truncatewords:80}}
-                    ...
-                </p>
-            </a>
-            {% endfor %}
+        <style>
+            .jumbotron{
+                background-color: #4fca42;/* #428bca;*/
+                color:#fff;
+                
+            }
+            .jumbotron .btn-success{
+                border-color: #eee;
+                padding-left: 50px;
+                padding-right:50px;
+            }
+        </style>
+        <div class="row">
+            <div class="jumbotron">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas.</h2>
+                <br>
+                <a href="#" class="btn btn-success"> Crea una cuenta.</a>
+                <br>
+                <br>
+                
+            </div>
         </div>
+
+        <div class="row">
+            <section class=" col-xs-12 col-sm-7 col-md-8">
+                <h2 class="section-title">Publicaciones recientes.</h2>
+                
+                <div class="list-group">
+                    {% for publicacion in lista_publicaciones %}
+                    <a href="" class=" list-group-item">
+                        <h4 class="list-group-item-heading"> {{publicacion.titulo}} </h4>
+                        <p class="list-group-item-text">
+                            {{publicacion.contenido|truncatewords:80}}
+                            ...
+                        </p>
+                    </a>
+                    {% endfor %}
+                </div>
+            </section>
+            <div class=" col-sm-4 col-md-3 hidden-xs">
+                <br>
+                <br>
+                <br>
+                <div class="side-bar list-group">
+                    <span><h3>Categorías</h3></span>
+                    <hr>
+                    <a class="active list-group-item">Profile</a>
+                    <a class="list-group-item">Profile</a>
+                    <a class="list-group-item">Profile</a>
+                    <a class="list-group-item">Profile</a>
+                    <a class="list-group-item">Profile</a>
+                    
+                </div>
+            </div>
+        </div>
+                
 {% endblock %}

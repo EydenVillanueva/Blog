@@ -11,6 +11,15 @@ class Publicacion(models.Model):
     def __str__(self):
         return self.titulo
 
+    def crear_titulo_formateado(self):
+        self.save()
+        titulo = self.titulo
+        titulo = titulo.split()
+        titulo_formateado = str(self.pk) +'-' + '-'.join(titulo)
+
+        self.titulo_formato = titulo_formateado
+
+        self.save()
 
     class Admin:
         list_display = ('titulo', 'fecha' , 'titulo_formato')
