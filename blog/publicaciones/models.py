@@ -17,3 +17,18 @@ class Publicacion(models.Model):
         list_filter = ('titulo', 'fecha')
         ordering = ('-fecha')
         search_fields = ('titulo')
+
+
+class Comentario(models.Model):
+    contenido = models.TextField()
+    fecha = models.DateField(auto_now=False,auto_now_add=True)
+    publicacion = models.ForeignKey(Publicacion,on_delete=models.CASCADE)
+
+
+    def __str__(self):
+        return str(self.fecha) + ' Comentario hecho a la publicacion:  ' +str(self.publicacion)
+
+
+    class Admin:
+        ordering = ('-fecha')
+        search_fields = ('contenido')
