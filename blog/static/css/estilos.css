@@ -39,7 +39,7 @@
     border-radius: 0;
 }
 
-h2.section-title{
+h2,h3,h4.section-title{
     border-bottom: 1px solid #9b9797;
     margin-bottom: 20px;
 }
@@ -47,4 +47,18 @@ h2.section-title{
 .row .side-bar{
     border: 0.5px solid #dadada;
     border-radius: 2px;
+}
+.comentarios{
+    border-radius: 2px;
+    border:1px solid  #ddd4d4;
+    padding: 0px;
+
+}
+.comentarios .comentario{
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.comentarios .comentario:hover{
+    background-color: #e8f0f2;
 }
