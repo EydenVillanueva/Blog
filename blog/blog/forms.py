@@ -1,6 +1,6 @@
 from django import forms
 
-
+#Formulario de contacto
 class ContactoForm(forms.Form):
 
     asunto = forms.CharField()
