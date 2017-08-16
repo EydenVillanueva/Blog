@@ -18,3 +18,16 @@ def detalle(request, titulo_formateado):
     context = { 'publicacion':publicacion,
                 'form':form }
     return render(request,'publicaciones/detalle_publicacion.html', context)
+
+
+def crearPublicacion(request):
+
+    form = CrearPublicacionForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+        form.CrearPublicacionForm()
+
+    context = {'form': form}
+
+    return render(request,'publicaciones/c-p.html',context)
