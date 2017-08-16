@@ -1,5 +1,5 @@
 from django import forms
-from .models import Comentario
+from .models import Comentario, Publicacion
 
 
 class ComentarioForm(forms.ModelForm):
@@ -9,15 +9,6 @@ class ComentarioForm(forms.ModelForm):
 
 
 class CrearPublicacionForm(forms.ModelForm):
-    class meta:
+    class Meta:
         model = Publicacion
         fields = ['titulo','contenido']
-
-        labels = {
-            'titulo':_('Título de la Publicación: ')
-            'contenido':_('Contenido de la Publicación: ')
-        }
-
-        widgets = {
-            'contenido': Textarea(attrs={'col': 80, 'rows': 20})
-        }

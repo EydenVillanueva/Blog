@@ -1,10 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from .models import Publicacion
-from .forms import ComentarioForm
+from .forms import ComentarioForm, CrearPublicacionForm
 
-def index(request):
-    return HttpResponse("Ok")
 
 def detalle(request, titulo_formateado):
     publicacion = get_object_or_404(Publicacion, titulo_formato=titulo_formateado)
@@ -25,9 +23,10 @@ def crearPublicacion(request):
     form = CrearPublicacionForm(request.POST or None)
 
     if form.is_valid():
-        form.save()
-        form.CrearPublicacionForm()
+        publicacion = form.save()
+        publicacion.crear_titulo_formateado()
+        form = CrearPublicacionForm()
 
     context = {'form': form}
 
-    return render(request,'publicaciones/c-p.html',context)
+    return render(request,'publicaciones/crear_publicacion.html',context)

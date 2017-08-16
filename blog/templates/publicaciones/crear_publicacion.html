@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
-{% block title%} Contacto {% endblock %}
+
+{% block title %} Crear Publicación {% endblock %}
 
 {% block template_conf_content %}
-
 {%endblock%}
-{% block active_contact %}active{% endblock %}
+
+
 {% block body%}
         <div class="row">
             <div class="col-xs-12 col-md-5 col-md-offset-3 bg-info">
-                <h3>Llena el formulario y nos pondremos en contacto contigo.</h3>
+                <h2>Nueva Publicación.</h2>
                 <form action="" class=" form-horizontal" method="POST">
                     {% csrf_token %}
                     {% for field in form %}
@@ -24,7 +25,7 @@
                     <div class="form-group">
                         <div class="col-md-offset-5">
                             <button type="submit" class="btn btn-success">
-                                Enviar
+                                Guardar
                             </button>
                         </div>
                     </div>
