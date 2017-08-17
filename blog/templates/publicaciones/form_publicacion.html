@@ -9,7 +9,12 @@
 {% block body%}
         <div class="row">
             <div class="col-xs-12 col-md-5 col-md-offset-3 bg-info">
-                <h2>Nueva Publicación.</h2>
+              {% ifequal flag 'modificar' %}
+                <h2>Modificar.</h2>
+              {% endifequal %}
+              {% ifequal flag 'nuevo' %}
+                <h2>Nueva Publicacion.</h2>
+              {% endifequal %}
                 <form action="" class=" form-horizontal" method="POST">
                     {% csrf_token %}
                     {% for field in form %}

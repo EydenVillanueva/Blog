@@ -8,7 +8,7 @@ class ComentarioForm(forms.ModelForm):
         fields = ['contenido','publicacion']
 
 
-class CrearPublicacionForm(forms.ModelForm):
+class PublicacionForm(forms.ModelForm):
     class Meta:
         model = Publicacion
         fields = ['titulo','contenido']
