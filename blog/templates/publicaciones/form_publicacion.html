@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %} Crear Publicación {% endblock %}
+
+{% block template_conf_content %}
+{%endblock%}
+
+
+{% block body%}
+        <div class="row">
+            <div class="col-xs-12 col-md-5 col-md-offset-3 bg-info">
+              {% ifequal flag 'modificar' %}
+                <h2>Modificar.</h2>
+              {% endifequal %}
+              {% ifequal flag 'nuevo' %}
+                <h2>Nueva Publicacion.</h2>
+              {% endifequal %}
+                <form action="" class=" form-horizontal" method="POST">
+                    {% csrf_token %}
+                    {% for field in form %}
+                    <div class=" form-group">
+                        <div class="col-xs-12 col-md-2">
+                            {{field.label_tag}}
+                        </div>
+
+                            {{field}}
+
+                    </div>
+                    {% endfor %}
+                    <div class="form-group">
+                        <div class="col-md-offset-5">
+                            <button type="submit" class="btn btn-success">
+                                Guardar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+{% endblock %}
