@@ -13,9 +13,14 @@ Admin	../publicaciones/models.py	/^    class Admin:$/;"	kind:class	line:41
 AppConfig	../publicaciones/apps.py	/^from django.apps import AppConfig$/;"	kind:namespace	line:1
 BASE_DIR	../blog/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:16
 Comentario	../publicaciones/admin.py	/^from .models import Comentario$/;"	kind:namespace	line:3
+Comentario	../publicaciones/forms.py	/^from .models import Comentario, Publicacion$/;"	kind:namespace	line:2
 Comentario	../publicaciones/models.py	/^class Comentario(models.Model):$/;"	kind:class	line:31
+ComentarioForm	../publicaciones/forms.py	/^class ComentarioForm(forms.ModelForm):$/;"	kind:class	line:5
+ComentarioForm	../publicaciones/views.py	/^from .forms import ComentarioForm, CrearPublicacionForm$/;"	kind:namespace	line:4
 ContactoForm	../blog/forms.py	/^class ContactoForm(forms.Form):$/;"	kind:class	line:4
 ContactoForm	../blog/views.py	/^from .forms import ContactoForm$/;"	kind:namespace	line:3
+CrearPublicacionForm	../publicaciones/forms.py	/^class CrearPublicacionForm(forms.ModelForm):$/;"	kind:class	line:11
+CrearPublicacionForm	../publicaciones/views.py	/^from .forms import ComentarioForm, CrearPublicacionForm$/;"	kind:namespace	line:4
 DATABASES	../blog/settings.py	/^DATABASES = {$/;"	kind:variable	line:85
 DEBUG	../blog/settings.py	/^DEBUG = True$/;"	kind:variable	line:26
 EMAIL_HOST	../blog/settings.py	/^EMAIL_HOST = 'smtp.gmail.com'$/;"	kind:variable	line:31
@@ -23,14 +28,19 @@ EMAIL_HOST_PASSWORD	../blog/settings.py	/^EMAIL_HOST_PASSWORD = 'pedritoesparzar
 EMAIL_HOST_USER	../blog/settings.py	/^EMAIL_HOST_USER = 'pedroesparzaaa@gmail.com'$/;"	kind:variable	line:32
 EMAIL_PORT	../blog/settings.py	/^EMAIL_PORT = 587$/;"	kind:variable	line:34
 EMAIL_USE_TLS	../blog/settings.py	/^EMAIL_USE_TLS = True$/;"	kind:variable	line:35
+HttpResponse	../publicaciones/views.py	/^from django.http import HttpResponse$/;"	kind:namespace	line:2
 INSTALLED_APPS	../blog/settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:40
 LANGUAGE_CODE	../blog/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	kind:variable	line:115
 MIDDLEWARE	../blog/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:51
+Meta	../publicaciones/forms.py	/^    class Meta:$/;"	kind:class	line:12
+Meta	../publicaciones/forms.py	/^    class Meta:$/;"	kind:class	line:6
 Migration	../publicaciones/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
 Migration	../publicaciones/migrations/0002_comentario.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:9
 Publicacion	../blog/views.py	/^from publicaciones.models import Publicacion$/;"	kind:namespace	line:2
 Publicacion	../publicaciones/admin.py	/^from .models import Publicacion$/;"	kind:namespace	line:2
+Publicacion	../publicaciones/forms.py	/^from .models import Comentario, Publicacion$/;"	kind:namespace	line:2
 Publicacion	../publicaciones/models.py	/^class Publicacion(models.Model):$/;"	kind:class	line:5
+Publicacion	../publicaciones/views.py	/^from .models import Publicacion$/;"	kind:namespace	line:3
 PublicacionesConfig	../publicaciones/apps.py	/^class PublicacionesConfig(AppConfig):$/;"	kind:class	line:4
 ROOT_URLCONF	../blog/settings.py	/^ROOT_URLCONF = 'blog.urls'$/;"	kind:variable	line:61
 SECRET_KEY	../blog/settings.py	/^SECRET_KEY = '@mxn#+oc&0)oo%84f_r5122g^!67-ndpf49rbf&gsw#y&a#2na'$/;"	kind:variable	line:23
@@ -53,32 +63,38 @@ admin	../blog/urls.py	/^from django.contrib import admin$/;"	kind:namespace	line
 admin	../publicaciones/admin.py	/^from django.contrib import admin$/;"	kind:namespace	line:1
 admin	../publicaciones/urls.py	/^from django.contrib import admin$/;"	kind:namespace	line:2
 admin.py	../publicaciones/admin.py	1;"	kind:file	line:1
-app_name	../publicaciones/urls.py	/^app_name = 'pubicaciones'$/;"	kind:variable	line:6
+app_name	../publicaciones/urls.py	/^app_name = 'publicaciones'$/;"	kind:variable	line:6
 application	../blog/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
 apps.py	../publicaciones/apps.py	1;"	kind:file	line:1
 asunto	../blog/forms.py	/^    asunto = forms.CharField()$/;"	kind:variable	line:6
 contacto	../blog/views.py	/^def contacto(request):$/;"	kind:function	line:27
 contenido	../publicaciones/models.py	/^    contenido = models.TextField()$/;"	kind:variable	line:32
 contenido	../publicaciones/models.py	/^    contenido = models.TextField()$/;"	kind:variable	line:7
+crearPublicacion	../publicaciones/views.py	/^def crearPublicacion(request):$/;"	kind:function	line:21
 crear_titulo_formateado	../publicaciones/models.py	/^    def crear_titulo_formateado(self):$/;"	kind:member	line:14
 db	../publicaciones/migrations/0002_comentario.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
 deletion	../publicaciones/migrations/0002_comentario.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
 dependencies	../publicaciones/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:12
 dependencies	../publicaciones/migrations/0002_comentario.py	/^    dependencies = [$/;"	kind:variable	line:11
+detalle	../publicaciones/views.py	/^def detalle(request, titulo_formateado):$/;"	kind:function	line:7
 django	../manage.py	/^            import django$/;"	kind:namespace	line:14
 django	../publicaciones/migrations/0002_comentario.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
 email	../blog/forms.py	/^    email = forms.EmailField()$/;"	kind:variable	line:8
 execute_from_command_line	../manage.py	/^        from django.core.management import execute_from_command_line$/;"	kind:namespace	line:8
 fecha	../publicaciones/models.py	/^    fecha = models.DateField(auto_now=False,auto_now_add=True)$/;"	kind:variable	line:33
 fecha	../publicaciones/models.py	/^    fecha = models.DateField(auto_now=False,auto_now_add=True)$/;"	kind:variable	line:8
+fields	../publicaciones/forms.py	/^        fields = ['contenido','publicacion']$/;"	kind:variable	line:8
+fields	../publicaciones/forms.py	/^        fields = ['titulo','contenido']$/;"	kind:variable	line:14
 fields	../publicaciones/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:18
 fields	../publicaciones/migrations/0002_comentario.py	/^            fields=[$/;"	kind:variable	line:18
 formato_email	../blog/forms.py	/^    def formato_email(self):$/;"	kind:member	line:14
 forms	../blog/forms.py	/^from django import forms$/;"	kind:namespace	line:1
+forms	../publicaciones/forms.py	/^from django import forms$/;"	kind:namespace	line:1
 forms.py	../blog/forms.py	1;"	kind:file	line:1
+forms.py	../publicaciones/forms.py	1;"	kind:file	line:1
+get_object_or_404	../publicaciones/views.py	/^from django.shortcuts import render, get_object_or_404, redirect$/;"	kind:namespace	line:1
 get_wsgi_application	../blog/wsgi.py	/^from django.core.wsgi import get_wsgi_application$/;"	kind:namespace	line:12
 include	../blog/urls.py	/^from django.conf.urls import url, include$/;"	kind:namespace	line:16
-index	../publicaciones/views.py	/^def index(request):$/;"	kind:function	line:3
 inicio	../blog/views.py	/^def inicio(request):$/;"	kind:function	line:7
 initial	../publicaciones/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:10
 list_display	../publicaciones/models.py	/^        list_display = ('titulo', 'fecha' , 'titulo_formato')$/;"	kind:variable	line:25
@@ -87,6 +103,8 @@ manage.py	../manage.py	1;"	kind:file	line:1
 mensaje	../blog/forms.py	/^    mensaje = forms.CharField(widget=forms.Textarea)$/;"	kind:variable	line:10
 migrations	../publicaciones/migrations/0001_initial.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 migrations	../publicaciones/migrations/0002_comentario.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
+model	../publicaciones/forms.py	/^        model = Comentario$/;"	kind:variable	line:7
+model	../publicaciones/forms.py	/^        model = Publicacion$/;"	kind:variable	line:13
 models	../publicaciones/migrations/0001_initial.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 models	../publicaciones/migrations/0002_comentario.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 models	../publicaciones/migrations/0002_comentario.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
@@ -104,8 +122,9 @@ os	../blog/settings.py	/^import os$/;"	kind:namespace	line:13
 os	../blog/wsgi.py	/^import os$/;"	kind:namespace	line:10
 os	../manage.py	/^import os$/;"	kind:namespace	line:2
 publicacion	../publicaciones/models.py	/^    publicacion = models.ForeignKey(Publicacion,on_delete=models.CASCADE)$/;"	kind:variable	line:34
+redirect	../publicaciones/views.py	/^from django.shortcuts import render, get_object_or_404, redirect$/;"	kind:namespace	line:1
 render	../blog/views.py	/^from django.shortcuts import render$/;"	kind:namespace	line:1
-render	../publicaciones/views.py	/^from django.shortcuts import render$/;"	kind:namespace	line:1
+render	../publicaciones/views.py	/^from django.shortcuts import render, get_object_or_404, redirect$/;"	kind:namespace	line:1
 search_fields	../publicaciones/models.py	/^        search_fields = ('contenido')$/;"	kind:variable	line:43
 search_fields	../publicaciones/models.py	/^        search_fields = ('titulo')$/;"	kind:variable	line:28
 send_mail	../blog/views.py	/^from django.core.mail import send_mail$/;"	kind:namespace	line:4
